@@ -13,11 +13,10 @@ import history from "utils/history";
 import hamburgerIcon from "assets/icons/hamburger.svg";
 
 import MobileNavContent from "../MobileNavContent";
-import Divider from "components/Divider";
 import Icon from "components/Icon";
 import MenuHeader from "../MenuHeader";
 
-import { NavbarContainer, HStack } from "./navbar.styles";
+import { NavbarContainer, HStack, NavItem } from "./navbar.styles";
 
 const Template = (props: { children?: any; mobileNav?: any }) => {
   const { mobileNav } = props;
@@ -63,29 +62,24 @@ const Template = (props: { children?: any; mobileNav?: any }) => {
         }}
       />
       <MobileNavContent isOpen={mobileNav.isOpen} onClose={mobileNav.onClose}>
-        <Stack width='100%' spacing={5}>
-          <Flex>
-            {
-              children.find((child: { type: any }) => child.type === Brand)
-                ?.props.children
-            }
-          </Flex>
-          <Stack>
-            {
-              children.find((child: { type: any }) => child.type === Links)
-                ?.props.children
-            }
-          </Stack>
-          <Divider />
-          <Stack>
-            {navLinkList.map((record) => (
-              <Box
-                key={record.label}
-                onClick={() => handleNavigate(record.path)}>
-                {record.label}
-              </Box>
-            ))}
-          </Stack>
+        <Stack width='100%' background='#777777'>
+          <Box padding={5}>
+            <Flex>
+              {
+                children.find((child: { type: any }) => child.type === Brand)
+                  ?.props.children
+              }
+            </Flex>
+            <Stack>
+              {navLinkList.map((record) => (
+                <Box
+                  key={record.label}
+                  onClick={() => handleNavigate(record.path)}>
+                  <NavItem>{record.label}</NavItem>
+                </Box>
+              ))}
+            </Stack>
+          </Box>
         </Stack>
       </MobileNavContent>
     </NavbarContainer>

@@ -15,8 +15,6 @@ export const Flex = chakra(CkFlex, {
     top: 0,
     left: 0,
     zIndex: 20,
-    px: 4,
-    py: 4,
   }),
 });
 

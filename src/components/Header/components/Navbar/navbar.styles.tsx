@@ -1,5 +1,6 @@
 import {
   chakra,
+  Box as CkBox,
   Flex as CkFlex,
   HStack as CkHStack,
   IconButton as CkIconButton,
@@ -43,5 +44,20 @@ export const IconButton = chakra(CkIconButton, {
     ariaLabel: "Open menu",
     fontSize: "20px",
     variant: "ghost",
+  }),
+});
+
+export const NavItem = chakra(CkBox, {
+  baseStyle: () => ({
+    padding: "22px 32px",
+    color: "#FFFFFF",
+    fontSize: "18px",
+    width: "280px",
+    cursor: "pointer",
+    lineHeight: "26px",
+
+    _hover: {
+      background: "#FFCC21",
+    },
   }),
 });

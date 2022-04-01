@@ -7,7 +7,7 @@ export const TopPageContainer = chakra(CkBox, {
   baseStyle: () => ({
     height: "max-content",
     marginTop: {
-      base: "72.5px",
+      base: "60px",
       md: "64px",
     },
   }),
