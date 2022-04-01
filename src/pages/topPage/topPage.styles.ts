@@ -3,17 +3,17 @@ import { chakra, Box as CkBox, Center as CkCenter } from "@chakra-ui/react";
 import meal1Image from "assets/images/d01.jpg";
 import hexagonIcon from "assets/icons/hexagon.svg";
 
-export const HomepageContainer = chakra(CkBox, {
+export const TopPageContainer = chakra(CkBox, {
   baseStyle: () => ({
     height: "max-content",
     marginTop: {
       base: "72.5px",
-      md: "112px",
+      md: "64px",
     },
   }),
 });
 
-export const HomepageSectionTopContainer = chakra(CkBox, {
+export const TopPageSectionTopContainer = chakra(CkBox, {
   baseStyle: () => ({
     width: "100%",
     display: "flex",
@@ -24,7 +24,7 @@ export const HomepageSectionTopContainer = chakra(CkBox, {
   }),
 });
 
-export const HomepageSectionTopImageContainer = chakra(CkCenter, {
+export const TopPageSectionTopImageContainer = chakra(CkCenter, {
   baseStyle: () => ({
     backgroundImage: `url(${meal1Image})`,
     backgroundSize: "cover",
@@ -44,7 +44,7 @@ export const HomepageSectionTopImageContainer = chakra(CkCenter, {
   }),
 });
 
-export const HomepageSectionBodyContainer = chakra(CkBox, {
+export const TopPageSectionBodyContainer = chakra(CkBox, {
   baseStyle: () => ({
     maxWidth: "960px",
     margin: "auto",
@@ -61,7 +61,7 @@ export const HomepageSectionBodyContainer = chakra(CkBox, {
   }),
 });
 
-export const HomepageSectionTagListContainer = chakra(CkBox, {
+export const TopPageSectionTagListContainer = chakra(CkBox, {
   baseStyle: () => ({
     width: "100%",
     maxWidth: "750px",
@@ -72,7 +72,7 @@ export const HomepageSectionTagListContainer = chakra(CkBox, {
   }),
 });
 
-export const HomepageSectionTagItem = chakra(CkCenter, {
+export const TopPageSectionTagItem = chakra(CkCenter, {
   baseStyle: () => ({
     backgroundImage: `url(${hexagonIcon})`,
     backgroundSize: "contain",
@@ -81,17 +81,20 @@ export const HomepageSectionTagItem = chakra(CkCenter, {
     height: "136px",
     flexDirection: "column",
     margin: "auto",
+    cursor: "pointer",
   }),
 });
 
-export const HomepageSectionDinnerItem = chakra(CkBox, {
+export const TopPageSectionDinnerItem = chakra(CkBox, {
   baseStyle: () => ({
     width: "100%",
     position: "relative",
+    alignItems: "center",
+    cursor: "pointer",
   }),
 });
 
-export const HomepageSectionDinnerItemFooter = chakra(CkBox, {
+export const TopPageSectionDinnerItemFooter = chakra(CkBox, {
   baseStyle: () => ({
     position: "absolute",
     bottom: 0,

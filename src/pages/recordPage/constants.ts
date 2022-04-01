@@ -9,13 +9,13 @@ export const recommendList = [
     image: bodyRecordImage,
   },
   {
-    title: "MY DIARY",
-    subTitle: "自分の日記",
+    title: "MY EXERCISE",
+    subTitle: "自分の運動の記録",
     image: myExerciseImage,
   },
   {
-    title: "BODY RECORD",
-    subTitle: "自分のカラダの記録",
+    title: "MY DIARY",
+    subTitle: "自分の日記",
     image: myDiaryImage,
   },
 ];

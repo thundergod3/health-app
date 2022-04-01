@@ -6,7 +6,7 @@ const theme = extendTheme({
     global: {
       "html, body": {
         background: "white",
-        fontFamily: "Montserrat, sans-serif",
+        fontFamily: "Inter, sans-serif",
       },
     },
   },
@@ -17,8 +17,8 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: "Montserrat, sans-serif",
-    body: "Montserrat, sans-serif",
+    heading: "Inter, sans-serif",
+    body: "Inter, sans-serif",
   },
 });
 

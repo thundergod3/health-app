@@ -14,7 +14,7 @@ export const RecordPageContainer = chakra(CkBox, {
     display: "flex",
     marginTop: {
       base: "72.5px",
-      md: "112px",
+      md: "80px",
     },
     flexDirection: "column",
     py: {
@@ -37,6 +37,7 @@ export const RecordPageRecommendItem = chakraShouldForwardProp(
     border: "24px solid #FFCC21",
     position: "relative",
     flexDirection: "column",
+    cursor: "pointer",
 
     _after: {
       content: "''",
@@ -69,9 +70,17 @@ export const RecordPageBodyContainer = chakra(CkBox, {
   }),
 });
 
+export const RecordPageExerciseContainer = chakra(CkBox, {
+  baseStyle: () => ({
+    background: "background.primary",
+    padding: "16px 24px",
+    marginBottom: "56px",
+  }),
+});
+
 export const RecordPageExerciseList = chakra(CkBox, {
   baseStyle: () => ({
-    height: "248px",
+    height: "198px",
     overflowY: "auto",
     paddingRight: "32px",
   }),
@@ -79,9 +88,8 @@ export const RecordPageExerciseList = chakra(CkBox, {
 
 export const RecordPageExerciseItem = chakra(CkFlex, {
   baseStyle: () => ({
-    paddingBottom: "5px",
+    marginBottom: "5px",
     borderBottom: "solid 1px #777777",
-    marginBottom: "8px",
     position: "relative",
     flexDirection: "column",
 
@@ -107,6 +115,8 @@ export const RecordPageDiaryItem = chakra(CkFlex, {
     flexDirection: "column",
     border: "2px solid #777777",
     padding: "16px",
+    cursor: "pointer",
+    minHeight: "231px",
   }),
 });
 

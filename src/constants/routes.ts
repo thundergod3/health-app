@@ -1,3 +1,3 @@
-export const HOMEPAGE = "/";
+export const TOP_PAGE = "/toppage";
 export const RECORD_PAGE = "/record";
-export const NEWS_PAGE = "/news";
+export const COLUMN_PAGE = "/column";

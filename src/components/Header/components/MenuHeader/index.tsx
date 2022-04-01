@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Box } from "@chakra-ui/react";
 
 import { navLinkList } from "./constants";
+import history from "utils/history";
 
 import hamburgerIcon from "assets/icons/hamburger.svg";
 import closeIcon from "assets/icons/close.svg";
@@ -28,6 +29,12 @@ const MenuHeader = () => {
     }
   };
 
+  const handleNavigate = (path: string) => {
+    if (path) history.push(path);
+
+    setOpen(false);
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleOutSideClick);
 
@@ -45,8 +52,12 @@ const MenuHeader = () => {
 
       {open && (
         <MenuHeaderContainer ref={menuHeaderRef}>
-          {navLinkList.map((record) => (
-            <MenuHeaderItem>{record.label}</MenuHeaderItem>
+          {navLinkList.map((record, index) => (
+            <MenuHeaderItem
+              key={index}
+              onClick={() => handleNavigate(record.path)}>
+              {record.label}
+            </MenuHeaderItem>
           ))}
         </MenuHeaderContainer>
       )}

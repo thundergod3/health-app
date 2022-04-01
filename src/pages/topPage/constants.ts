@@ -6,7 +6,7 @@ import l03Image from "assets/images/l03.jpg";
 import d01Image from "assets/images/d01.jpg";
 import l01Image from "assets/images/l01.jpg";
 
-export const homepageTagList = [
+export const topPageTagList = [
   {
     icon: dinnerIcon,
     label: "Morning",

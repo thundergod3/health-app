@@ -10,10 +10,8 @@ import chakraShouldForwardProp from "utils/chakraShouldForwardProp";
 export const NavbarContainer = chakraShouldForwardProp(
   CkFlex,
   ({ borderBottomWidth }: any) => ({
-    py: {
-      base: 4,
-      md: 8,
-    },
+    aligItems: "center",
+    height: "64px",
     width: "100%",
     maxWidth: "960px",
     margin: "auto",

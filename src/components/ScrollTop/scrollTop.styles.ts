@@ -9,7 +9,10 @@ export const ScrollTopButton = chakra(CkButton, {
     borderRadius: "100%",
     position: "fixed",
     bottom: "20px",
-    right: "96px",
+    right: {
+      base: "24px",
+      md: "96px",
+    },
 
     _hover: {
       background: "#FF963C",

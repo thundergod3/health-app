@@ -9,13 +9,13 @@ import NormalText from "components/NormalText";
 import TitleText from "components/TitleText";
 
 import {
-  NewsPageContainer,
-  NewsPageItem,
-  NewsPageItemTime,
-  NewsPageTagItem,
-} from "./newsPage.styles";
+  ColumnPageContainer,
+  ColumnPageItem,
+  ColumnPageItemTime,
+  ColumnPageTagItem,
+} from "./columnPage.styles";
 
-const NewsPage = () => {
+const ColumnPage = () => {
   const [newsListState, setNewsListState] = useState(newsList);
   const [count, setCount] = useState(0);
 
@@ -25,10 +25,10 @@ const NewsPage = () => {
   };
 
   return (
-    <NewsPageContainer>
+    <ColumnPageContainer>
       <SimpleGrid
         columns={{
-          base: 1,
+          base: 2,
           md: 4,
         }}
         spacing={{ base: "8", md: "32px" }}
@@ -37,28 +37,32 @@ const NewsPage = () => {
           md: "32px",
         }}>
         {newTagList.map((record, index) => (
-          <NewsPageTagItem key={index}>
+          <ColumnPageTagItem key={index}>
             <TitleText
               title={record.title}
-              fontSizeProps='22px'
+              fontSize='22px'
+              fontSizeMobileProps='16px'
               lineHeight='26px'
               color='#FFCC21'
               maxWidth='200px'
               textPosition='center'
+              fontWeight='normal'
             />
             <Divider
               borderBottomWidth='2px'
               borderColor='#fff'
-              mt='16px'
-              mb='12px'
+              mt='12px'
+              mb='8px'
               width='56px'
             />
             <NormalText
               text={record.subTitle}
               color='#fff'
               fontSizeProps='18px'
+              fontSizeMobileProps='14px'
+              lineHeight='26px'
             />
-          </NewsPageTagItem>
+          </ColumnPageTagItem>
         ))}
       </SimpleGrid>
       <SimpleGrid
@@ -72,7 +76,7 @@ const NewsPage = () => {
           md: "56ox",
         }}>
         {newsListState.map((record, index) => (
-          <NewsPageItem key={index}>
+          <ColumnPageItem key={index}>
             <Box position='relative'>
               <img
                 src={record.image}
@@ -83,13 +87,13 @@ const NewsPage = () => {
                   objectFit: "cover",
                 }}
               />
-              <NewsPageItemTime>
+              <ColumnPageItemTime>
                 <NormalText
                   text={record.time}
                   color='#fff'
                   fontSizeProps='15px'
                 />
-              </NewsPageItemTime>
+              </ColumnPageItemTime>
             </Box>
             <NormalText
               text={record.title}
@@ -103,14 +107,14 @@ const NewsPage = () => {
               color='#FF963C'
               fontSizeProps='12px'
             />
-          </NewsPageItem>
+          </ColumnPageItem>
         ))}
       </SimpleGrid>
       <Center my='32px'>
         {count < 2 && (
           <ButtonField
             color='#fff'
-            width='300px'
+            width='296px'
             height='56px'
             background='transparent linear-gradient(74deg, #FFCC21 0%, #FF963C 100%)'
             hoverBackgroundColor='transparent linear-gradient(74deg, #FFCC21 0%, #FF963C 100%)'
@@ -119,8 +123,8 @@ const NewsPage = () => {
           />
         )}
       </Center>
-    </NewsPageContainer>
+    </ColumnPageContainer>
   );
 };
 
-export default NewsPage;
+export default ColumnPage;

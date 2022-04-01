@@ -23,6 +23,8 @@ const Header = () => {
   const mobileNav = useDisclosure();
 
   const handleNavLink = (path: string) => {
+    if (path) history.push(path);
+
     mobileNav.onClose();
   };
 
@@ -38,7 +40,7 @@ const Header = () => {
                 md: "10px",
               }}
               onClick={() => {
-                history.push(routes.HOMEPAGE);
+                history.push(routes.TOP_PAGE);
               }}>
               <Icon icon={logoIcon} width={110} height={40} />
             </Center>

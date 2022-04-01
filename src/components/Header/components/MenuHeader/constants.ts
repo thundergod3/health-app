@@ -1,14 +1,17 @@
+import * as routes from "constants/routes";
+
 export const navLinkList = [
   {
-    path: "",
+    path: routes.RECORD_PAGE,
     label: "自分の記録",
   },
   {
-    path: "",
+    path: routes.RECORD_PAGE,
     label: "体重グラフ",
+    scrollTo: "graphRecord",
   },
   {
-    path: "",
+    path: routes.TOP_PAGE,
     label: "目標",
   },
   {
@@ -16,7 +19,7 @@ export const navLinkList = [
     label: "選択中のコース",
   },
   {
-    path: "",
+    path: routes.COLUMN_PAGE,
     label: "コラム一覧",
   },
   {

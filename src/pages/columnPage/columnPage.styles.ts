@@ -5,11 +5,11 @@ import {
   Center as CkCenter,
 } from "@chakra-ui/react";
 
-export const NewsPageContainer = chakra(CkBox, {
+export const ColumnPageContainer = chakra(CkBox, {
   baseStyle: () => ({
     minHeight: {
       base: "calc(100vh - 75.6px)",
-      md: "calc(100vh - 112px)",
+      md: "calc(100vh - 64px)",
     },
     maxHeight: "100%",
     maxWidth: "960px",
@@ -17,7 +17,7 @@ export const NewsPageContainer = chakra(CkBox, {
     display: "flex",
     marginTop: {
       base: "72.5px",
-      md: "112px",
+      md: "80px",
     },
     flexDirection: "column",
     py: {
@@ -31,22 +31,25 @@ export const NewsPageContainer = chakra(CkBox, {
   }),
 });
 
-export const NewsPageTagItem = chakra(CkCenter, {
+export const ColumnPageTagItem = chakra(CkCenter, {
   baseStyle: () => ({
     flexDirection: "column",
     background: "background.primary",
-    padding: "24px 16px",
+    padding: "22px 16px",
+    cursor: "pointer",
   }),
 });
 
-export const NewsPageItem = chakra(CkFlex, {
+export const ColumnPageItem = chakra(CkFlex, {
   baseStyle: () => ({
     flexDirection: "column",
     width: "100%",
+    minHeight: "234px",
+    cursor: "pointer",
   }),
 });
 
-export const NewsPageItemTime = chakra(CkFlex, {
+export const ColumnPageItemTime = chakra(CkFlex, {
   baseStyle: () => ({
     alignItems: "center",
     width: "144px",

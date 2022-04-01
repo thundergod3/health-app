@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import {
+  Box,
   Center,
   CircularProgress,
   CircularProgressLabel,
   SimpleGrid,
 } from "@chakra-ui/react";
 
-import { dinnerList, homepageTagList } from "./constants";
+import { dinnerList, topPageTagList } from "./constants";
 
 import graphIcon from "assets/icons/graph.svg";
 
@@ -15,18 +16,19 @@ import Icon from "components/Icon";
 import ButtonField from "components/ButtonField";
 
 import {
-  HomepageContainer,
-  HomepageSectionBodyContainer,
-  HomepageSectionDinnerItem,
-  HomepageSectionDinnerItemFooter,
-  HomepageSectionTagItem,
-  HomepageSectionTopContainer,
-  HomepageSectionTopImageContainer,
-} from "./homepage.styles";
+  TopPageContainer,
+  TopPageSectionBodyContainer,
+  TopPageSectionDinnerItem,
+  TopPageSectionDinnerItemFooter,
+  TopPageSectionTagItem,
+  TopPageSectionTopContainer,
+  TopPageSectionTopImageContainer,
+} from "./topPage.styles";
 
-import "./homepage.styles.scss";
+import "./topPage.styles.scss";
+import HealthGraph from "components/HealthGraph";
 
-const Homepage = () => {
+const TopPage = () => {
   const [dinnerListState, setDinnerListState] = useState(dinnerList);
   const [count, setCount] = useState(0);
 
@@ -36,14 +38,14 @@ const Homepage = () => {
   };
 
   return (
-    <HomepageContainer>
-      <HomepageSectionTopContainer>
-        <HomepageSectionTopContainer
+    <TopPageContainer>
+      <TopPageSectionTopContainer>
+        <TopPageSectionTopContainer
           flex={{
             base: 1,
-            md: 0.4,
+            md: 0.422,
           }}>
-          <HomepageSectionTopImageContainer>
+          <TopPageSectionTopImageContainer>
             <CircularProgress
               value={75}
               className='circular-progress-container'>
@@ -65,19 +67,21 @@ const Homepage = () => {
                 </Center>
               </CircularProgressLabel>
             </CircularProgress>
-          </HomepageSectionTopImageContainer>
-        </HomepageSectionTopContainer>
-        <HomepageSectionTopContainer
+          </TopPageSectionTopImageContainer>
+        </TopPageSectionTopContainer>
+        <TopPageSectionTopContainer
           flex={{
             base: 1,
-            md: 0.6,
+            md: 0.578,
           }}>
           <Center width='100%' background='background.primary'>
-            <Icon icon={graphIcon} width='590px' height='282px' />
+            <Box width='80%'>
+              <HealthGraph />
+            </Box>
           </Center>
-        </HomepageSectionTopContainer>
-      </HomepageSectionTopContainer>
-      <HomepageSectionBodyContainer>
+        </TopPageSectionTopContainer>
+      </TopPageSectionTopContainer>
+      <TopPageSectionBodyContainer>
         <SimpleGrid
           columns={{
             base: 2,
@@ -85,8 +89,8 @@ const Homepage = () => {
           }}
           spacing={{ base: "8", md: "15", lg: "25" }}
           marginTop='24px'>
-          {homepageTagList.map((record) => (
-            <HomepageSectionTagItem key={record.label}>
+          {topPageTagList.map((record) => (
+            <TopPageSectionTagItem key={record.label}>
               <Icon icon={record.icon} width='36px' height='36px' />
               <NormalText
                 text={record.label}
@@ -94,7 +98,7 @@ const Homepage = () => {
                 fontSizeProps='20px'
                 marginTop='10px'
               />
-            </HomepageSectionTagItem>
+            </TopPageSectionTagItem>
           ))}
         </SimpleGrid>
         <SimpleGrid
@@ -102,10 +106,10 @@ const Homepage = () => {
             base: 1,
             md: 4,
           }}
-          spacing={{ base: "8", md: "15", lg: "25" }}
+          spacing={{ base: "8", md: "8px" }}
           marginTop='24px'>
           {dinnerListState.map((record, index) => (
-            <HomepageSectionDinnerItem key={index}>
+            <TopPageSectionDinnerItem key={index}>
               <img
                 src={record.image}
                 alt={record.label}
@@ -115,22 +119,22 @@ const Homepage = () => {
                   objectFit: "cover",
                 }}
               />
-              <HomepageSectionDinnerItemFooter>
+              <TopPageSectionDinnerItemFooter>
                 <NormalText
                   text={record.label}
                   color='white'
                   fontSizeProps='15px'
                 />
-              </HomepageSectionDinnerItemFooter>
-            </HomepageSectionDinnerItem>
+              </TopPageSectionDinnerItemFooter>
+            </TopPageSectionDinnerItem>
           ))}
         </SimpleGrid>
-      </HomepageSectionBodyContainer>
+      </TopPageSectionBodyContainer>
       <Center my='32px'>
         {count < 2 && (
           <ButtonField
             color='#fff'
-            width='300px'
+            width='296px'
             height='56px'
             background='transparent linear-gradient(74deg, #FFCC21 0%, #FF963C 100%)'
             hoverBackgroundColor='transparent linear-gradient(74deg, #FFCC21 0%, #FF963C 100%)'
@@ -139,8 +143,8 @@ const Homepage = () => {
           />
         )}
       </Center>
-    </HomepageContainer>
+    </TopPageContainer>
   );
 };
 
-export default Homepage;
+export default TopPage;

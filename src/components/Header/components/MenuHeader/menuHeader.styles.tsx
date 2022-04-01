@@ -13,12 +13,14 @@ export const MenuHeaderContainer = chakra(CkBox, {
 
 export const MenuHeaderItem = chakra(CkBox, {
   baseStyle: () => ({
-    padding: "23px 32px",
+    padding: "22px 32px",
     border: "solid 1px #707070",
     color: "#FFFFFF",
     fontSize: "18px",
     width: "280px",
     cursor: "pointer",
+    lineHeight: "26px",
+
     _hover: {
       background: "#FFCC21",
     },

@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 import { navLinkList } from "../MenuHeader/constants";
+import history from "utils/history";
 
 import hamburgerIcon from "assets/icons/hamburger.svg";
 
@@ -26,6 +27,12 @@ const Template = (props: { children?: any; mobileNav?: any }) => {
   const children: any = React.Children.toArray(props.children).filter(
     isValidElement
   );
+
+  const handleNavigate = (path: string) => {
+    if (path) history.push(path);
+
+    mobileNav?.onClose();
+  };
 
   return (
     <NavbarContainer borderBottomWidth={useColorModeValue("none", "1px")}>
@@ -72,7 +79,11 @@ const Template = (props: { children?: any; mobileNav?: any }) => {
           <Divider />
           <Stack>
             {navLinkList.map((record) => (
-              <Box key={record.label}>{record.label}</Box>
+              <Box
+                key={record.label}
+                onClick={() => handleNavigate(record.path)}>
+                {record.label}
+              </Box>
             ))}
           </Stack>
         </Stack>

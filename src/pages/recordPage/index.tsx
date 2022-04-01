@@ -3,16 +3,16 @@ import React, { useState } from "react";
 
 import { exerciseList, recommendList } from "./constants";
 
-import graphqlImage from "assets/icons/full-graph.svg";
-
 import NormalText from "components/NormalText";
 import TitleText from "components/TitleText";
 import ButtonField from "components/ButtonField";
+import HealthGraph from "components/HealthGraph";
 
 import {
   RecordPageBodyContainer,
   RecordPageContainer,
   RecordPageDiaryItem,
+  RecordPageExerciseContainer,
   RecordPageExerciseItem,
   RecordPageExerciseList,
   RecordPageGraphActiveButton,
@@ -49,10 +49,12 @@ const RecordPage = () => {
             <TitleText
               title={record.title}
               color='#FFCC21'
-              fontSize='24px'
+              fontSize='25px'
+              lineHeight='30px'
               marginBottom='16px'
               width='max-content'
               zIndex={10}
+              fontWeight='normal'
             />
             <RecordPageRecommendSubTitleContainer>
               <NormalText text={record.subTitle} color='#fff' fontSize='14px' />
@@ -70,15 +72,16 @@ const RecordPage = () => {
           />
           <NormalText text='2021.05.21' color='#fff' fontSizeProps='15px' />
         </Flex>
-        <Box px='48px'>
-          <img
+        <Box my='12px'>
+          {/* <img
             src={graphqlImage}
             alt='graphqlImage'
             style={{
               width: "100%",
               height: "242px",
             }}
-          />
+          /> */}
+          <HealthGraph />
         </Box>
         <Flex>
           <RecordPageGraphButton>日</RecordPageGraphButton>
@@ -87,7 +90,7 @@ const RecordPage = () => {
           <RecordPageGraphActiveButton>年</RecordPageGraphActiveButton>
         </Flex>
       </RecordPageBodyContainer>
-      <RecordPageBodyContainer>
+      <RecordPageExerciseContainer>
         <Flex>
           <NormalText
             text='MY EXERCISE'
@@ -98,8 +101,9 @@ const RecordPage = () => {
           <NormalText
             text='2021.05.21'
             color='#fff'
-            fontSizeProps='15px'
+            fontSizeProps='22px'
             marginBottom='8px'
+            lineHeight='26px'
           />
         </Flex>
         <SimpleGrid
@@ -116,17 +120,20 @@ const RecordPage = () => {
                     text={record.title}
                     color='#fff'
                     fontSize='15px'
+                    lineHeight='21px'
                   />
                   <NormalText
                     text={record.minute}
                     color='#FFCC21'
                     fontSize='18px'
+                    lineHeight='18px'
                   />
                 </Flex>
                 <NormalText
                   text={record.subTitle}
                   color='#FFCC21'
                   fontSize='15px'
+                  lineHeight='22px'
                   normalTextContainerStyle={{
                     marginLeft: "20px",
                   }}
@@ -142,17 +149,20 @@ const RecordPage = () => {
                     text={record.title}
                     color='#fff'
                     fontSize='15px'
+                    lineHeight='21px'
                   />
                   <NormalText
                     text={record.minute}
                     color='#FFCC21'
                     fontSize='18px'
+                    lineHeight='18px'
                   />
                 </Flex>
                 <NormalText
                   text={record.subTitle}
                   color='#FFCC21'
                   fontSize='15px'
+                  lineHeight='22px'
                   normalTextContainerStyle={{
                     marginLeft: "20px",
                   }}
@@ -161,12 +171,12 @@ const RecordPage = () => {
             ))}
           </RecordPageExerciseList>
         </SimpleGrid>
-      </RecordPageBodyContainer>
+      </RecordPageExerciseContainer>
       <Box>
         <NormalText text='MY DIARY' color='#414141' fontSize='22px' />
         <SimpleGrid
           columns={{
-            base: 1,
+            base: 2,
             md: 4,
           }}
           spacing={{ base: "8px", md: "12px" }}>
@@ -205,7 +215,7 @@ const RecordPage = () => {
         {count < 2 && (
           <ButtonField
             color='#fff'
-            width='300px'
+            width='296px'
             height='56px'
             background='transparent linear-gradient(74deg, #FFCC21 0%, #FF963C 100%)'
             hoverBackgroundColor='transparent linear-gradient(74deg, #FFCC21 0%, #FF963C 100%)'
