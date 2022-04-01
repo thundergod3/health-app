@@ -52,7 +52,7 @@ export const NavItem = chakra(CkBox, {
     padding: "22px 32px",
     color: "#FFFFFF",
     fontSize: "18px",
-    width: "280px",
+    width: "100%",
     cursor: "pointer",
     lineHeight: "26px",
 
