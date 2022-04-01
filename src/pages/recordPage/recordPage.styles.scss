@@ -1,0 +1,18 @@
+.record-page-exercise-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.record-page-exercise-list {
+  scrollbar-width: auto;
+  scrollbar-color: #ffcc21 #777777;
+}
+
+.record-page-exercise-list::-webkit-scrollbar-track {
+  background: #ffcc21;
+  width: 8px;
+}
+.record-page-exercise-list::-webkit-scrollbar-thumb {
+  background-color: #777777;
+  border-radius: 3px;
+  border: 3px solid #777777;
+}

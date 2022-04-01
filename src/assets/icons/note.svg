@@ -1,0 +1,11 @@
+<svg id="icon_memo" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <rect id="Rectangle_47" data-name="Rectangle 47" width="32" height="32" fill="#ff963c" opacity="0"/>
+  <g id="Group_139" data-name="Group 139" transform="translate(-443 -18)">
+    <path id="Path_43" data-name="Path 43" d="M1824.04,985.124l-.992-.991a1.54,1.54,0,0,0-2.178,0l-.927.928,3.169,3.169.928-.927A1.542,1.542,0,0,0,1824.04,985.124Z" transform="translate(-1351.49 -956.458)" fill="#ff963c"/>
+    <path id="Path_44" data-name="Path 44" d="M1812.462,993.44v3.169h3.169l7.828-7.828-3.169-3.169Z" transform="translate(-1352.702 -956.154)" fill="#ff963c"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="8.952" height="1.492" transform="translate(452.347 27.934)" fill="#ff963c"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="8.952" height="1.492" transform="translate(452.347 33.398)" fill="#ff963c"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="5.47" height="1.492" transform="translate(452.366 38.863)" fill="#ff963c"/>
+    <path id="Path_45" data-name="Path 45" d="M1819.911,1001.917a.413.413,0,0,1-.408.414h-16.811a.414.414,0,0,1-.408-.414v-21.2a.414.414,0,0,1,.408-.415H1819.5a.413.413,0,0,1,.408.415v5.987l1.958-1.987v-4a2.385,2.385,0,0,0-2.367-2.4h-16.811a2.386,2.386,0,0,0-2.367,2.4v21.2a2.385,2.385,0,0,0,2.367,2.4H1819.5c1.309,0,2.365-.225,2.367-1.552v-7.5l-1.958,1.987Z" transform="translate(-1354.325 -957.319)" fill="#ff963c"/>
+  </g>
+</svg>
